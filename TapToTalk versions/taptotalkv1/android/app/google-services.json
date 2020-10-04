@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "378754635240",
+    "firebase_url": "https://taptotalk-1b199.firebaseio.com",
+    "project_id": "taptotalk-1b199",
+    "storage_bucket": "taptotalk-1b199.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378754635240:android:4a72dd9a49899ba343005d",
+        "android_client_info": {
+          "package_name": "com.taptotalkv1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378754635240-6ij4o29hv956hdnq6t8uggh5bbtenub1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.taptotalkv1",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "378754635240-7uprm9do8fd63odv18c14cotlmf771pi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3JPvQJEJOWG0yWGO2JVuoz-9cDI-JOBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378754635240-7uprm9do8fd63odv18c14cotlmf771pi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
