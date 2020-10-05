@@ -1,0 +1,8 @@
+Setup firebse in app
+Connect firebase with app
+
+1. Google button - 
+	a) use google-signin to get token-
+           https://github.com/react-native-community/google-signin
+	b) use firebase to pass token in signinwith credentials
+	   

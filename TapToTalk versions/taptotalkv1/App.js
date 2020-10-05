@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import {View,Text,StyleSheet,Button, TouchableOpacity, TextInput} from 'react-native';
 import {GoogleSignin,GoogleSigninButton,statusCodes} from '@react-native-community/google-signin';
+import * as firebase from 'firebase';
+import { firebaseConfig } from './config';
 
-
+if(!firebase.apps.length)
+  firebase.initializeApp(firebaseConfig);
 
 export default class App extends Component 
 {  
@@ -26,11 +29,23 @@ export default class App extends Component
   signIn = async () => 
   {
   try {
-    await GoogleSignin.hasPlayServices();
+    //await GoogleSignin.hasPlayServices();
     const userInfo = await GoogleSignin.signIn();
-    //this.setState({ userInfo });
+    
     console.log(userInfo);
-  } catch (error) {
+    
+    const provider = firebase.auth.GoogleAuthProvider;
+    const credential = provider.credential(userInfo.idToken);
+    
+    firebase.auth().signInWithCredential(credential)
+      .then((data) => {
+        console.log('SUCCESS', data);
+      })
+      .catch((error) => {
+        console.log('ERROR', error);
+      });
+
+   }catch (error) {
     console.log(error);
     if (error.code === statusCodes.SIGN_IN_CANCELLED) {
       // user cancelled the login flow
